@@ -1,0 +1,7 @@
+interface:
+  display_name: "面试总控 Agent"
+  short_description: "一键完成转写与复盘，并向飞书群发送重点提醒"
+  default_prompt: "使用 $interview-agent 开始处理最新的待办面试。"
+
+policy:
+  allow_implicit_invocation: true
