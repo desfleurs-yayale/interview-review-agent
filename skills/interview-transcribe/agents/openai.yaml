@@ -1,0 +1,7 @@
+interface:
+  display_name: "面试转写"
+  short_description: "自动选择最新面试录音并调用本地 FunASR 转写"
+  default_prompt: "使用 $interview-transcribe 开始转写最新的待处理面试录音。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,23 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+.pycache/
+*.py[cod]
+
+# Recordings and generated private content
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.caf
+*.flac
+*.ogg
+*.opus
+*.webm
+*.mp4
+*_speakers.txt
+.interview-transcribe-state.json
+inbox/
+logs/
+tmp/
