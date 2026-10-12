@@ -42,6 +42,28 @@ assets/                  匿名化流程示意图
 
 ## 快速开始
 
+### 自动安装本地转写环境（Mac / Linux）
+
+需要 Python 3.10+ 和 FFmpeg（Mac 可使用 `brew install ffmpeg`）。
+
+```bash
+git clone https://github.com/desfleurs-yayale/interview-review-agent.git
+cd interview-review-agent
+bash install.sh
+```
+
+脚本创建 `.venv`、安装依赖、检查导入，并在缺少 `.env` 时复制配置模板；重复运行会保留已有配置。
+编辑 `.env` 中的录音和知识库路径；含空格的路径请用引号包裹。然后测试：
+
+```bash
+bash scripts/run-transcribe.sh "/完整路径/测试录音.m4a" "/完整路径/测试转写.txt"
+```
+
+启动脚本会加载本地 `.env` 并使用 `.venv`。首次转写需要联网下载模型。
+这只安装本地转写环境：还需在 AI 工作台导入 Skill、配置等效环境变量和定时任务，才能跑通完整复盘流程。
+
+### 手动安装
+
 1. 安装本地依赖：`python3 -m pip install -r requirements.txt`。
 2. 复制配置模板：`cp .env.example .env`。
 3. 设置录音目录、Obsidian Vault、Inbox、复盘目录和本地转写脚本位置。
